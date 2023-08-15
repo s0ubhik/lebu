@@ -1,4 +1,4 @@
 # lebu
- A programming lanuage simple as Python, fast as C 
+ A programming language simple as Python, fast as C 
 
  Not yet documented
