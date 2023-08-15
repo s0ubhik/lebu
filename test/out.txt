@@ -1,0 +1,19 @@
+num = 10
+pi = 3.140000
+name = Mukesh
+name length: 6
+nums length: 5
+num = 12
+X is 1
+Y is not 1
+sum =  30
+sum =  5
+k = 0 1 2 3 4 5 6 7 8 9 10 
+j = 0 1 2 3 4 5 6 7 8 9 10 
+nums[0] = 1 
+nums[1] = 2 
+nums[2] = 3 
+nums[3] = 4 
+nums[4] = 5 
+Quack, quack Jack
+Quack, quack Binod

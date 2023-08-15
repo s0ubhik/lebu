@@ -1,0 +1,40 @@
+func kol(Duck d) {
+	d.name = "Mukesh";
+	d.size = 20;
+	return d;
+}
+
+
+class Duck {
+	str name;
+	int size;
+
+	func _init(name, size) {
+		this.name = name;
+		this.size = size;
+	}
+
+	func quack(this) {
+		printf("%d Quack, Quack %s\n", this.size, this.name);
+	}
+}
+
+duck = Duck("Soubhik", 10);
+duck.quack();
+
+duck = kol(duck);
+duck.quack();
+
+for i in 1..2 {
+	printf("%d\n",)
+}
+// func str_comp(s1, s2) {
+// 	i = 0;
+// 	while 1 {
+// 		if s1[i] == '\0' {
+// 			if s2[i] == '\0' { return 1; }
+// 		}
+// 		if s1[i] != s2[i] { return 0 }
+// 		i = i + 1;
+// 	}
+// }

@@ -1,0 +1,83 @@
+num = 10;
+pi = 3.14;
+name = "Mukesh";
+nums = [1,2,3,4,5];
+
+printf("num = %d\n",num);
+printf("pi = %f\n",pi);
+printf("name = %s\n",name);
+printf("name length: %d\n", name.len());
+printf("nums length: %d\n", nums.len());
+num = num + 2;
+printf("num = %d\n", num);
+
+x = 1;
+if x == 1 {
+  print("X is 1");
+} else {
+  print("X is not 1");
+}
+
+y = 2;
+if y == 1 {                
+  print("Y is 1");
+} else {
+  print("Y is not 1");
+}
+
+/*
+some multiline comment
+bla bla bla
+*/
+
+func add(x,y){
+  return x + y; # comment
+}
+
+printf("sum =  %d\n", add(10,20));
+
+func add_r(*x,y) {
+   x = x + y;
+}
+
+a = 2;
+b = 3;
+add_r(&a,b);
+printf("sum =  %d\n", a);
+
+k = 0;
+printf("k = ");
+while k <= 10 {
+  printf("%d ", k);
+  k = k + 1;
+}
+print("");
+
+printf("j = ");
+for j in 0 .. 10 {
+  printf("%d ", j);
+}
+print("");
+
+for j in 0 .. 4 {
+  printf("nums[%d] = %d \n", j, nums[j]);
+}
+
+class Duck {
+  str name;
+
+  func _init(name) {
+    this.name = name;
+  }
+
+  func quack(this){
+    printf("Quack, quack %s\n", this.name);
+  }
+
+}
+
+duck = Duck("Jack");
+duck.quack();
+duck.name = "Binod";
+duck.quack();
+

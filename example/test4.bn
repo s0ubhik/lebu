@@ -1,0 +1,29 @@
+for i in 0..5 {
+  for j in 0..i {
+    printf("* ");
+  }
+  printf("\n");
+}
+
+class Test {
+  int val;
+  int arr[20];
+
+  func _init(val) {
+    this.val = val;
+  }
+
+  func test(this) {
+    printf("this is %d\n", this.val);
+  }
+}
+
+x1 = Test(1);
+x1.lst = [1,2,4];
+x2 = Test(2);
+x3 = Test(3);
+
+x1.test();
+x2.test();
+x3.test();
+

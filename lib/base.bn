@@ -1,0 +1,49 @@
+#include<stdlib.h>
+#define arr_len(array) ({int retval; retval = sizeof((array))/sizeof((array)[0]); retval;})
+
+func str_len(x) {
+        i = 0;
+        while x[i] != '\0' {
+                i = i + 1;
+        }
+        return i;
+}
+
+func str_comp(s1, s2) {
+        i = 0;
+        while 1 {
+                if s1[i] != s2[i] { return 0; }
+                if s1[i] == '\0' {
+                        if s2[i] == '\0' {
+                                return 1;
+                        }
+                }
+                i = i + 1;
+        }
+
+}
+
+func int_str(x) {
+  char* y = "";
+  volatile_c("y = (char*)x;");
+  return y;
+}
+
+func str_con(s1, s2){
+  l1 = s1.len()-1;
+  l2 = s2.len()-1;
+  char* text = malloc(100);
+  j = 0;
+
+  for i in 0 .. l1 {
+    text[j] = s1[i];
+    j = j + 1;
+  }
+
+  for i in 0 .. l2 {
+    text[j] = s2[i];
+    j = j + 1;
+  }
+
+  return text;
+}

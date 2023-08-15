@@ -1,0 +1,132 @@
+class C {
+	func y(this, x) {
+		printf("FR %d\n", x);
+	}
+}
+
+class B {
+	C c;
+	func y(this, x) {
+		printf("FR %d\n", x);
+	}
+}
+
+class A {
+	B b;
+	func y(o) {
+		printf("FR %d\n", o);
+	}
+}
+
+x = A();
+x.b = B();
+x.b.c = C();
+
+x.y(10);
+x.b.c.y(3);
+
+for i in 1..2 {
+	printf("%d\n", i);
+}
+
+func add(x,y) {
+	return x+y;
+}
+
+func add_r(*x, y) {
+	x = x + y;
+}
+
+func tofloat(x) {
+	return x + 0.0;
+}
+
+m = 100;
+j = 200;
+k = add(m,j);
+
+add_r(&m, j);
+
+printf("Sum: %d\n", k);
+printf("Sum: %d\n", m);
+
+printf("To float %f\n", tofloat(10));
+
+func str_len(x) {
+	i = 0;
+	while x[i] != '\0' {
+		i = i + 1;
+	}
+	return i;
+}
+
+func str_comp(s1, s2) {
+	i = 0;
+	while 1 {
+		if s1[i] != s2[i] { return 0; }
+		if s1[i] == '\0' {
+			if s2[i] == '\0' {
+				return 1;
+			}
+		}
+		i = i + 1;
+	}
+
+}
+
+class Duck {
+	str name;
+	func _init(name) {
+		this.name = name;
+	}
+	func quack(this){
+		printf("Quack, quack %s\n", this.name);
+	}
+}
+
+duck = Duck("soubhik");
+duck.quack();
+duck.name = "binod";
+duck.quack();
+
+name = "abc";
+
+printf("len: %d\n",name.len());
+
+if name.comp("abcs") {
+	printf("string compare success\n");
+} else {
+	printf("string compare failed\n");
+}
+# HELLO
+// HELLo
+/* HELLLOO
+BROOO */
+
+if name.comp("abc") {
+	printf("string compare success\n");
+} else {
+	printf("string compare failed\n");
+}
+
+func take(*h) {
+	h[0] = 12;
+}
+
+func arr_len(*h) {
+	return 10;
+}
+
+l = [1,3,4,5,6];
+
+l[2] = 10;
+
+take(l);
+
+
+for i in 0 .. 4 {
+	printf("x[%d] = %d\n",i, l[i]);
+}
+
+jjj = "Hello";
+

@@ -1,0 +1,11 @@
+#include<stdio.h>
+func input(text, int size){
+  char* x = malloc(size);
+  printf("%s", text);
+  scanf("%s", x);
+  return x;
+}
+
+func print(text){
+  printf("%s\n", text);
+}

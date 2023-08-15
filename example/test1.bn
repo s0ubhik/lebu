@@ -1,0 +1,11 @@
+l = [1,23,2];
+for i in 0 .. l.len()-1 {
+printf("l[%d] = %d\n", i, l[i]);
+}
+
+int testInteger = 0;
+name = "abc";
+
+char* name = input("Enter name: ", 10);
+printf("Your name is %s.\n", name);
+
